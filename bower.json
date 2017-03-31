@@ -1,0 +1,17 @@
+{
+  "name": "forever",
+  "description": "aloe stuff",
+  "main": "app.js",
+  "authors": [
+    "james runham"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/James84/forever",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
