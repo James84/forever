@@ -6,6 +6,8 @@ var path = require('path');
 
 var app = express();
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // set up templating
 app.engine('handlebars', handlebars({
     layoutsDir: path.join(__dirname, 'views/layouts'),
