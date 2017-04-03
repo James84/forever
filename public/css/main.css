@@ -1,0 +1,34 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    color: #555f66;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: 300;
+    line-height: 1.75em;
+    background: #fff;
+}
+
+.header{
+    border: solid 1px #555f66;
+    color: #555f66;
+}
+
+.header a{
+    color: #555f66;
+}
+
+.nav > li > a:hover, 
+.nav > li > a:focus{
+    background: #fff;
+    color: color: #555f66;
+}
+
+.navbar-brand{
+    text-transform: uppercase;
+}
+
+.navbar-brand, 
+.nav > li > a{
+    margin-top: 15px;
+}

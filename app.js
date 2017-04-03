@@ -11,7 +11,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 // set up templating
 app.engine('handlebars', handlebars({
     layoutsDir: path.join(__dirname, 'views/layouts'),
-    defaultLayout: 'main'
+    defaultLayout: 'main',
+    helpers: {
+            section: function (name, options) {
+                if (!this._sections) {
+                    this._sections = {};
+                }
+                this._sections[name] = options.fn(this);
+                return null;
+            }
+        }
 }));
 
 app.set('view engine', 'handlebars');

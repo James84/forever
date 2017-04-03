@@ -9,31 +9,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">        
         <script src="/jquery/dist/jquery.min.js"></script>
+        
+        {{{_sections.head}}}
     </head>
     <body>
-        <section class="container-fluid">
-            <div class="row">
-                <div class="col-md-offset-3 col-md-6">
+        <header class="header container-fluid">
+            <div class="nav-contents row">
+                <div class="col-md-12">
                     <div class="navbar-header">
-                      <a class="navbar-brand" href="/">Website name</a>
+                      <a class="navbar-brand" href="www.bbc.co.uk">Website name</a>
                     </div>
-                    <nav class="navbar navbar">
+                    <nav class="navbar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="">
-                                <a href="/">Home</a>
+                            <li>
+                                <a class="home-link-item" href="/">Home</a>
                             </li>
                             <li>
-                                <a href="#">About</a>
+                                <a class="home-link-item" href="#">About</a>
                             </li>
                             <li>
-                                <a href="#">Products</a>
+                                <a class="home-link-item" href="#">Products</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-        </section>
+        </header>
         {{{body}}}
     </body>
 </html>
