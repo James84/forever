@@ -3,14 +3,11 @@ html,body{
     padding: 0;
     color: #555f66;
     font-family: "Roboto", Helvetica, sans-serif;
-    font-size: 14pt;
-    font-weight: 300;
     line-height: 1.75em;
-    background: #fff;
 }
 
 .header{
-    border: solid 1px #555f66;
+    box-shadow: 0 0 0.1em 0 rgba(0, 0, 0, 0.25);
     color: #555f66;
 }
 
@@ -24,8 +21,14 @@ html,body{
     color: color: #555f66;
 }
 
+.navbar{
+    margin-bottom: 0;
+}
+
 .navbar-brand{
     text-transform: uppercase;
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar-brand, 
