@@ -26,7 +26,15 @@ app.engine('handlebars', handlebars({
 app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res){
-    res.render('index');
+    res.render('home');
+});
+
+app.get('/product/:id', function(req, res){
+   res.render('view'); 
+});
+
+app.get('/products', function(req, res){
+   res.render('index'); 
 });
 
 app.listen(PORT, function(){

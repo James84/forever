@@ -1,13 +1,18 @@
+@font-face{
+    font-family: 'caviar';
+    src: url('/fonts/Caviar-Dreams/CaviarDreams.ttf');
+}
+
 html,body{
     margin: 0;
     padding: 0;
     color: #555f66;
-    font-family: "Roboto", Helvetica, sans-serif;
+    font-family: "caviar";
     line-height: 1.75em;
 }
 
 .header{
-    box-shadow: 0 0 0.1em 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.25);
     color: #555f66;
 }
 
@@ -34,4 +39,5 @@ html,body{
 .navbar-brand, 
 .nav > li > a{
     margin-top: 15px;
+    font-size: 2em;
 }
