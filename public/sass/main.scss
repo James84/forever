@@ -1,0 +1,43 @@
+@font-face{
+    font-family: 'caviar';
+    src: url('/fonts/Caviar-Dreams/CaviarDreams.ttf');
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    color: #555f66;
+    font-family: "caviar";
+    line-height: 1.75em;
+} 
+
+.header{
+    box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.25);
+    color: #555f66;
+}
+
+.header a{
+    color: #555f66;
+}
+
+.nav > li > a:hover, 
+.nav > li > a:focus{
+    background: #fff;
+    color: #555f66;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.navbar-brand{
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-brand, 
+.nav > li > a{
+    margin-top: 15px;
+    font-size: 2em;
+}
