@@ -4,17 +4,19 @@
   "description": "aloe stuff",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node ./app.js"
   },
   "author": "james runham",
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.8.0",
     "express": "^4.15.2",
-    "express3-handlebars": "^0.5.2"
+    "express3-handlebars": "^0.5.2",
+    "gulp": "latest",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "nodemon": "^1.11.0"
   },
-  "dependencies": {},
-  "scripts": {
-    "build": "node ./app.js"   
-  }
+  "dependencies": {}
 }

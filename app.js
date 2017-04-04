@@ -20,7 +20,7 @@ app.engine('handlebars', handlebars({
                 this._sections[name] = options.fn(this);
                 return null;
             }
-        }
+        } 
 }));
 
 app.set('view engine', 'handlebars');
