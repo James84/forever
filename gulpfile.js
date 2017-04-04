@@ -1,7 +1,11 @@
-let gulp = require('gulp'),
+const gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     gutil = require('gulp-util'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer');
+
+const cssDestination = 'public/css/';
+const sassInput = 'public/sass/**/*.scss';
 
 gulp.task('server', () => {
     var stream = nodemon({
@@ -16,12 +20,13 @@ gulp.task('server', () => {
     });
 });
 
-gulp.watch('public/sass/**/*.scss', ['sass']);
+gulp.watch(sassInput, ['sass']);
 
 gulp.task('sass', () => {
-    gulp.src('public/sass/**/*.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('public/css/'));   
+    gulp.src(sassInput)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest(cssDestination));
 });
 
 gulp.task('default', ['server']);

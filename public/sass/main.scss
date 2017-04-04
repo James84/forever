@@ -1,29 +1,32 @@
+$font-color: #555f66;
+$font-name: 'caviar';
+
 @font-face{
-    font-family: 'caviar';
+    font-family: $font-name;
     src: url('/fonts/Caviar-Dreams/CaviarDreams.ttf');
 }
 
 html,body{
     margin: 0;
     padding: 0;
-    color: #555f66;
-    font-family: "caviar";
+    color: $font-color;
+    font-family: $font-name;
     line-height: 1.75em;
 } 
 
 .header{
     box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.25);
-    color: #555f66;
+    color: $font-color;
 }
 
 .header a{
-    color: #555f66;
+    color: $font-color;
 }
 
 .nav > li > a:hover, 
 .nav > li > a:focus{
     background: #fff;
-    color: #555f66;
+    color: $font-color;
 }
 
 .navbar{

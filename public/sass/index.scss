@@ -1,4 +1,4 @@
-.hero-image{
+.hero-image {
     background-image: url(/images/running-runner-long-distance-fitness-40751.jpeg);
     background-size: cover;
     background-position: center center;
@@ -6,10 +6,12 @@
     padding: 17em 0;
 }
 
-.homepage-title>h2{
-    text-transform: uppercase;
-    color: #BAC;
-    font-size: 3em;
-    font-weight: 300;
-    text-align: center;
+.homepage-title {
+    h2 {
+        text-transform: uppercase;
+        color: #BAC;
+        font-size: 3em;
+        font-weight: 300;
+        text-align: center;
+    }
 }
