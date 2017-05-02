@@ -1,0 +1,57 @@
+var keystone = require('keystone'),
+    importRoutes = keystone.importer(__dirname);
+
+// Handle 404 errors
+keystone.set('404', function(req, res, next) {
+    res.notfound();
+});
+
+// Handle other errors
+keystone.set('500', function(err, req, res, next) {
+    var title, message;
+    if (err instanceof Error) {
+        message = err.message;
+        err = err.stack;
+    }
+    res.err(err, title, message);
+});
+
+// Load Routes
+var routes = {
+    views: importRoutes('./views')
+};
+
+// Bind Routes
+exports = module.exports = function(app) {
+//    app.get('/', routes.views.index);
+//    app.get('/', routes.views.gallery);
+    
+    app.get('/', function(req, res){
+        res.render('home');
+    });
+
+    app.get('/crafts', function(req, res){
+        res.render('crafts/index', {
+            title: "Leonida Crafts"
+        });
+    });
+
+    app.get('/darcies', function(req, res){
+        res.render('darcies/index', {
+            title: "Darcies"
+        });
+    });
+    
+    app.get('/enchanted', function(req, res){
+        res.render('enchantedteardrops/index', {
+            title: "Enchanted Teardrops"
+        });
+    });
+
+    app.get('/forever', function(req, res){
+        res.render('forever/index', {
+            title: "Forever"
+        });
+    });
+
+}
