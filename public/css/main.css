@@ -33,3 +33,6 @@ html, body {
 .nav > li > a {
   margin-top: 15px;
   font-size: 2em; }
+
+.home-link-item {
+  text-transform: uppercase; }
