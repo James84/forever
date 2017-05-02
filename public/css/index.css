@@ -11,3 +11,20 @@
   font-size: 3em;
   font-weight: 300;
   text-align: center; }
+
+.link-container a {
+  display: inline;
+  color: #CD8500;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  width: 20px;
+  font-size: 2em; }
+
+.link-container a:hover {
+  text-decoration: none;
+  color: #CD8500; }
+
+@media screen and (min-width: 960px) {
+  .link-container {
+    text-align: center;
+    margin-top: 5em; } }

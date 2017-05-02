@@ -32,30 +32,27 @@ app.get('/', function(req, res){
 
 app.get('/crafts', function(req, res){
     res.render('crafts/index', {
-        h1: "Leonida Crafts",
-        title: "test"
+        title: "Leonida Crafts"
     });
 });
 
 app.get('/darcies', function(req, res){
-    res.render('darcies/index');
+    res.render('darcies/index', {
+        title: "Darcies"
+    });
 });
 
 app.get('/enchanted', function(req, res){
-    res.render('enchantedteardrops/index');
+    res.render('enchantedteardrops/index', {
+        title: "Enchanted Teardrops"
+    });
 });
 
 app.get('/forever', function(req, res){
-    res.render('forever/index');
+    res.render('forever/index', {
+        title: "Forever"
+    });
 });
-
-//app.get('/product/:id', function(req, res){
-//   res.render('view'); 
-//});
-//
-//app.get('/products', function(req, res){
-//   res.render('index'); 
-//});
 
 app.listen(PORT, function(){
    console.log(`App running on port ${PORT}`) 
