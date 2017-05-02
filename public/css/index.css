@@ -20,6 +20,7 @@
   width: 20px;
   font-size: 2em; }
 
+.link-container a,
 .link-container a:hover {
   text-decoration: none;
   color: #CD8500; }
