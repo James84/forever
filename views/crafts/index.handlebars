@@ -1,1 +1,13 @@
-{{> _local_homepage this}}
+<div class="container">
+    <div class="row">
+        {{#each crafts}}
+            <div class="col-md-4 image-container"> 
+                <h2>{{title}}</h2>
+                <div>
+                    {{description}}
+                </div>
+<!--                <img src="/images/main/{{path.filename}}" alt="gallery image"/>-->
+            </div>
+        {{/each}}
+    </div>
+</div>

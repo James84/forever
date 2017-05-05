@@ -19,9 +19,9 @@ var imageStore = new keystone.Storage({
     }
 });
 
-var Pearls = new keystone.List('Pearls');
+var Crafts = new keystone.List('Crafts');
  
-Pearls.add({
+Crafts.add({
     title: { type: Types.Text, required: true, initial: true, index: true },
     description: { type: Types.Textarea, required: true, initial: true },    
     price: { type: Types.Money, required: true, initial: true, required: true, index: true },
@@ -29,7 +29,34 @@ Pearls.add({
     image: { type: Types.Url, required: true, initial: true, storage: imageStore }
 });
 
-Pearls.track = true; // automatically record who and when updated/created record
-Pearls.defaultColumns = 'title, description, price, thumbnail, image'; // set what to show in admin UI
-Pearls.defaultSort = 'updatedAt';
-Pearls.register();
+Crafts.track = true; // automatically record who and when updated/created record
+Crafts.defaultColumns = 'title, description, price, thumbnail, image'; // set what to show in admin UI
+Crafts.defaultSort = 'updatedAt';
+Crafts.register();
+
+
+/*
+Boolean
+Color
+Date
+Datetime
+Email
+Html
+Key
+Location
+Markdown
+Money
+Name
+Number
+Password
+Select
+Text
+Textarea
+Url
+AzureFile
+CloudinaryImage
+CloudinaryImages
+Embedly
+LocalFile
+S3 File
+*/

@@ -30,15 +30,11 @@ exports = module.exports = function(app) {
         res.render('home');
     });
 
-    app.get('/crafts', function(req, res){
-        res.render('crafts/index', {
-            title: "Leonida Crafts"
-        });
-    });
+    app.get('/crafts', routes.views.crafts);
 
-    app.get('/darcies', function(req, res){
-        res.render('darcies/index', {
-            title: "Darcies"
+    app.get('/darceys', function(req, res){
+        res.render('darceys/index', {
+            title: "Darceys"
         });
     });
     
