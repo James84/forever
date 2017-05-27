@@ -18,7 +18,7 @@ gulp.task('server', () => {
         gutil.log(`error: ${err}`, gutil.colors.red());
 
     });
-});
+}); 
 
 gulp.watch(sassInput, ['sass']);
 

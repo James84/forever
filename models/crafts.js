@@ -25,8 +25,8 @@ Crafts.add({
     title: { type: Types.Text, required: true, initial: true, index: true },
     description: { type: Types.Textarea, required: true, initial: true },    
     price: { type: Types.Money, required: true, initial: true, required: true, index: true },
-    thumbnail: { type: Types.Url, required: true, initial: true, storage: thumbNailStore },
-    image: { type: Types.Url, required: true, initial: true, storage: imageStore }
+    thumbnail: { type: Types.File, required: true, initial: true, storage: thumbNailStore },
+    image: { type: Types.File, required: true, initial: true, storage: imageStore }
 });
 
 Crafts.track = true; // automatically record who and when updated/created record

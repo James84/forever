@@ -1,12 +1,18 @@
+{{#section 'head'}}
+<!--    <link href="/css/results.css" rel="stylesheet" type="text/css"/>-->
+{{/section}}
+
 <div class="container">
-    <div class="row">
+    <div class="row gallery-container">
         {{#each crafts}}
             <div class="col-md-4 image-container"> 
+                <img src="/images/thumbnails/{{thumbnail.filename}}" alt="thumbnail image"/>                
+                <img class="main-image" src="/images/main/{{image.filename}}" alt="thumbnail image"/>
+
                 <h2>{{title}}</h2>
                 <div>
                     {{description}}
                 </div>
-<!--                <img src="/images/main/{{path.filename}}" alt="gallery image"/>-->
             </div>
         {{/each}}
     </div>

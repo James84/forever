@@ -32,11 +32,7 @@ exports = module.exports = function(app) {
 
     app.get('/crafts', routes.views.crafts);
 
-    app.get('/darceys', function(req, res){
-        res.render('darceys/index', {
-            title: "Darceys"
-        });
-    });
+    app.get('/darceys', routes.views.darceys);
     
     app.get('/enchanted', function(req, res){
         res.render('enchantedteardrops/index', {
@@ -49,5 +45,4 @@ exports = module.exports = function(app) {
             title: "Forever"
         });
     });
-
 }
