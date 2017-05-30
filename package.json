@@ -4,7 +4,7 @@
   "description": "aloe stuff",
   "main": "app.js",
   "scripts": {
-    "build": "node ./app.js"
+    "start": "gulp"
   },
   "author": "james runham",
   "license": "ISC",
