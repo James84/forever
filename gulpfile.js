@@ -1,8 +1,8 @@
 const gulp = require('gulp'),
-    nodemon = require('gulp-nodemon'),
-    gutil = require('gulp-util'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer');
+      nodemon = require('gulp-nodemon'),
+      gutil = require('gulp-util'),
+      sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer');
 
 const cssDestination = 'public/css/';
 const sassInput = 'public/sass/**/*.scss';
@@ -16,7 +16,6 @@ gulp.task('server', () => {
         gutil.log('restarting', gutil.colors.magenta());
     }).on('crash', (err) => {
         gutil.log(`error: ${err}`, gutil.colors.red());
-
     });
 }); 
 
