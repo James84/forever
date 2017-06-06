@@ -3,18 +3,19 @@
 {{/section}}
 
 <section class="row">
-    <div class="col-md-12">
+    <div class="col-lg-12">
         <section class="row product-results-container">
             {{#each products}}
-                <section class="product-container col-md-6 col-lg-offset-1 col-lg-3">
-                    <img class="product-thumbnail" src="http://www.darceyscandles.co.uk/{{ThumbnailUrl}}" alt="thumbnail image"/>                
-                    <h2>{{Title}}</h2>
-                    <div>
-                        {{Description}}
-                    </div>
-                    <div>
-                        £{{Price}}
-                    </div>
+                <section class="product-container col-md-6  col-lg-offset-1 col-lg-3">
+                    <section class="product-thumbnail">
+                        <img  src="http://www.darceyscandles.co.uk/{{ThumbnailUrl}}" alt="thumbnail image"/>   
+                    </section>
+                    <section class="product-info">
+                        <h3>{{Title}}</h3>
+                        <div>
+                            £{{Price}}
+                        </div>
+                    </section>
                 </section>
             {{/each}}
         </section>

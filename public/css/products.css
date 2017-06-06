@@ -1,3 +1,13 @@
 .product-thumbnail {
-  max-width: 250px;
-  height: auto; }
+  width: 200px;
+  height: 200px; }
+
+.product-thumbnail > img {
+  max-height: 200px;
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.product-info {
+  text-align: center; }
