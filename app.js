@@ -1,23 +1,18 @@
 const PORT = 3000;
 
-//var express = require('express');
-var keystone = require('keystone');
-var expressHandleBars = require('express3-handlebars');
+var express = require('express');
+var handlebars = require('express3-handlebars');
 var path = require('path');
 
-keystone.init({
-    'name': 'LeonidaBoutique',
-    
-    'scss': 'public',
-    'static': 'public',
-//    'favicon': 'public/favicon.ico',
-    'views': 'views',
-    
-    'custom engine': expressHandleBars({
+var app = express();
+
+app.use(express.static('public'))
+
+// set up templating
+app.engine('handlebars', handlebars({
                         layoutsDir: path.join(__dirname, 'views/layouts'),
                         partialsDir: path.join(__dirname, '/views/partials/'),
                         defaultLayout: 'main',
-//                        extname: '.hbs',
                         helpers: {
                          // set up sections
                           section: function(name, options){
@@ -28,21 +23,20 @@ keystone.init({
                             return null;
                           }
                         }
-                    }),
-    
-    'view engine': 'handlebars',
-    
-    'auto update': true,
-    'mongo': 'mongodb://localhost/leonida-boutique',
-  
-    'session': true,
-    'auth': true,
-    'user model': 'User', 
-    'cookie secret': '93eb055c82b64ad98177a5def4929593'
+                    }));
+
+app.set('view engine', 'handlebars');
+
+app.get('/', function(req, res){
+    res.render('home');
 });
 
-require('./models'); 
- 
-keystone.set('routes', require('./routes'));
- 
-keystone.start();
+app.get('/darceys', function(req, res){
+    let darceys = require('./DAL/darceyRepository');
+    
+    darceys.Products(req, res);
+});
+
+app.listen(PORT, function(){
+   console.log(`App running on port ${PORT}`) 
+});

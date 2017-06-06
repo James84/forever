@@ -9,7 +9,7 @@ const sassInput = 'public/sass/**/*.scss';
 
 gulp.task('server', () => {
     var stream = nodemon({
-        script: 'app.js'
+        script: 'app2.js'
     });
 
     stream.on('restart', () => {
