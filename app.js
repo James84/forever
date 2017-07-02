@@ -33,19 +33,19 @@ app.engine('handlebars', handlebars({
 
 app.set('view engine', 'handlebars');
 
-app.get('/', function(req, res){
-    res.render('home');
-});
+//app.get('/', function(req, res){
+//    res.render('home');
+//});
+//
+//app.get('/darceys', function(req, res){
+//    let darceys = require('./DAL/darceyRepository');
+//    
+//    darceys.Products(req, res);
+//});
 
-app.get('/darceys', function(req, res){
-    let darceys = require('./DAL/darceyRepository');
-    
-    darceys.Products(req, res);
-});
+let routes = require('./routes');
 
-app.get('/crafts', function(req, res){
-    res.render('crafts/index');
-});
+//app.get('/crafts', routes.views.crafts);
 
 app.listen(PORT, function(){
    console.log(`App running on port ${PORT}`) 

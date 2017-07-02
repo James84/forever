@@ -32,17 +32,21 @@ exports = module.exports = function(app) {
 
     app.get('/crafts', routes.views.crafts);
 
-    app.get('/darceys', routes.views.darceys);
-    
-    app.get('/enchanted', function(req, res){
-        res.render('enchantedteardrops/index', {
-            title: "Enchanted Teardrops"
-        });
-    });
+    app.get('/darceys', function(req, res){
+        let darceys = require('./DAL/darceyRepository');
 
-    app.get('/forever', function(req, res){
-        res.render('forever/index', {
-            title: "Forever"
-        });
+        darceys.Products(req, res);
     });
+    
+//    app.get('/enchanted', function(req, res){
+//        res.render('enchantedteardrops/index', {
+//            title: "Enchanted Teardrops"
+//        });
+//    }); 
+//
+//    app.get('/forever', function(req, res){
+//        res.render('forever/index', {
+//            title: "Forever"
+//        });
+//    });
 }
