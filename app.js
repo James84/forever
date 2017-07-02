@@ -4,7 +4,13 @@ var express = require('express');
 var handlebars = require('express3-handlebars');
 var path = require('path');
 
-var app = express();
+var express = require('express'),
+    mongoose = require('mongoose'),
+    app = express(),
+    keystone = require('keystone');
+
+    keystone.set('app', app);
+    keystone.set('mongoose', mongoose);
 
 app.use(express.static('public'))
 
@@ -35,6 +41,10 @@ app.get('/darceys', function(req, res){
     let darceys = require('./DAL/darceyRepository');
     
     darceys.Products(req, res);
+});
+
+app.get('/crafts', function(req, res){
+    res.render('crafts/index');
 });
 
 app.listen(PORT, function(){
