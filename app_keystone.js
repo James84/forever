@@ -33,7 +33,7 @@ keystone.init({
     'view engine': 'handlebars',
     
     'auto update': true,
-    'mongo': 'mongodb://localhost/leonida-boutique',
+    'mongo': 'mongodb://localhost:27017/leonida-boutique',
   
     'session': true,
     'auth': true,

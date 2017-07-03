@@ -23,8 +23,6 @@ var routes = {
 
 // Bind Routes
 exports = module.exports = function(app) {
-//    app.get('/', routes.views.index);
-//    app.get('/', routes.views.gallery);
     
     app.get('/', function(req, res){
         res.render('home');
@@ -34,15 +32,15 @@ exports = module.exports = function(app) {
 
     app.get('/darceys', routes.views.darceys);
     
-    app.get('/enchanted', function(req, res){
-        res.render('enchantedteardrops/index', {
-            title: "Enchanted Teardrops"
-        });
-    });
-
-    app.get('/forever', function(req, res){
-        res.render('forever/index', {
-            title: "Forever"
-        });
-    });
+//    app.get('/enchanted', function(req, res){
+//        res.render('enchantedteardrops/index', {
+//            title: "Enchanted Teardrops"
+//        });
+//    });
+//
+//    app.get('/forever', function(req, res){
+//        res.render('forever/index', {
+//            title: "Forever"
+//        });
+//    });
 }
