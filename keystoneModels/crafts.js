@@ -22,17 +22,28 @@ var imageStore = new keystone.Storage({
 var Crafts = new keystone.List('Crafts');
  
 Crafts.add({
-    title: { type: Types.Text, required: true, initial: true, index: true },
-    description: { type: Types.Textarea, required: true, initial: true },    
-    price: { type: Types.Money, required: true, initial: true, required: true, index: true },
-    thumbnail: { type: Types.File, required: true, initial: true, storage: thumbNailStore },
-    image: { type: Types.File, required: true, initial: true, storage: imageStore }
+    Title: { type: Types.Text, required: true, initial: true, index: true },
+    Description: { type: Types.Textarea, required: true, initial: true },    
+    Price: { type: Types.Money, required: true, initial: true, required: true, index: true },
+    ThumbnailUrl: { type: Types.File, required: true, initial: true, storage: thumbNailStore },
+    MainImageUrl: { type: Types.File, required: true, initial: true, storage: imageStore }
 });
 
 Crafts.track = true; // automatically record who and when updated/created record
 Crafts.defaultColumns = 'title, description, price, thumbnail, image'; // set what to show in admin UI
 Crafts.defaultSort = 'updatedAt';
 Crafts.register();
+
+/*
+
+    Title: String,
+    ThumbnailUrl: String,
+    MainImageUrl: String,
+    Price: String,
+    Reference: String,
+    ProductLink: String,
+    Description: String
+*/
 
 
 /*
