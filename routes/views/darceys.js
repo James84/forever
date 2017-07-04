@@ -1,5 +1,4 @@
-let keystone = require('keystone'),
-    DarceyProducts = keystone.list('darceys');
+let keystone = require('keystone');
     //DarceyMongo = require('../../DAL/darceyRepository');
 
 exports = module.exports = function(req, res) {
