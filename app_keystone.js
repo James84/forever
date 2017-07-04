@@ -1,9 +1,8 @@
 const PORT = 3000;
 
-//var express = require('express');
-var keystone = require('keystone');
-var expressHandleBars = require('express3-handlebars');
-var path = require('path');
+let keystone = require('keystone'),
+    expressHandleBars = require('express3-handlebars'),
+    path = require('path');
 
 keystone.init({
     'name': 'LeonidaBoutique',
@@ -41,7 +40,7 @@ keystone.init({
     'cookie secret': '93eb055c82b64ad98177a5def4929593'
 });
 
-require('./models'); 
+require('./keystoneModels'); 
  
 keystone.set('routes', require('./routes'));
  

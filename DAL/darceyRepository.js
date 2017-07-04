@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
+var mapper = require('../mappers/productMapper')
 
-mongoose.connect('mongodb://localhost:27017/DarceyDB', function (err) {
+var db = mongoose.createConnection('mongodb://localhost:27017/DarceyDB', function (err) {
     if (err) {
         console.log(`Error: ${err}`);
     } else {
@@ -8,22 +9,10 @@ mongoose.connect('mongodb://localhost:27017/DarceyDB', function (err) {
     }
 });
 
-var db = mongoose.connection;;
-
-var darceySchema = mongoose.Schema({
-    Title: String,
-    ThumbnailUrl: String,
-    MainImageUrl: String,
-    Price: String,
-    Reference: String,
-    ProductLink: String,
-    Description: String
-}, {
-    collection: 'DarceyProduct'
-});
+var darceySchema = require('./models/darcey');
 
 var exports = module.exports.Products = function (req, res) {
-    var darcey = mongoose.model('Darcey', darceySchema);
+    var darcey = db.model('Darcey', darceySchema);
 
     var query = darcey.find({});
 
@@ -32,7 +21,7 @@ var exports = module.exports.Products = function (req, res) {
             console.log(`Error: ${err}`);
         } else {
             res.render('darceys/index', {
-                products: products
+                products: mapper.darceyMapper(products)
             });
         }
     });
