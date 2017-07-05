@@ -5,6 +5,7 @@ module.exports = {
         for (i in products){
             let currentProduct = products[i];
             let newProduct = {
+                ProductLink: `/darceys/${currentProduct._id}`,
                 Title: currentProduct.Title,
                 ThumbnailUrl: `http://www.darceyscandles.co.uk${currentProduct.ThumbnailUrl}`,
                 Price: currentProduct.Price,
@@ -22,6 +23,7 @@ module.exports = {
         for (i in products){
             let currentProduct = products[i];
             let newProduct = {
+                ProductLink: '/crafts',
                 Title: currentProduct.Title,
                 ThumbnailUrl: `/images/thumbnails/${currentProduct.ThumbnailUrl.filename}`,
                 Price: currentProduct.Price,

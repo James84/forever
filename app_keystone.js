@@ -33,7 +33,8 @@ keystone.init({
     
     'auto update': true,
     'mongo': 'mongodb://localhost:27017/leonida-boutique',
-  
+//    'mongo': 'mongodb://jrunham:220815Dy@ds149122.mlab.com:49122/leonida-boutique',
+
     'session': true,
     'auth': true,
     'user model': 'User', 

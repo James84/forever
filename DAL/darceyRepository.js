@@ -1,15 +1,16 @@
-var mongoose = require('mongoose');
-var mapper = require('../mappers/productMapper')
+let mongoose = require('mongoose'),
+    mapper = require('../mappers/productMapper'),
+    darceySchema = require('./models/darcey');
 
-var db = mongoose.createConnection('mongodb://localhost:27017/DarceyDB', function (err) {
+const DBCONNECTION = 'mongodb://localhost:27017/DarceyDB';
+
+var db = mongoose.createConnection(DBCONNECTION, function (err) {
     if (err) {
         console.log(`Error: ${err}`);
     } else {
         console.log('database connected');
     }
 });
-
-var darceySchema = require('./models/darcey');
 
 var exports = module.exports.Products = function (req, res) {
     var darcey = db.model('Darcey', darceySchema);
@@ -23,6 +24,31 @@ var exports = module.exports.Products = function (req, res) {
             res.render('darceys/index', {
                 products: mapper.darceyMapper(products)
             });
+        }
+    });
+} 
+
+module.exports.GetProductById = function(req, res, id){
+    var darcey = db.model('Darcey', darceySchema);
+    
+    var query = darcey.findById(id);
+    
+    
+    query.exec(function (err, product) {
+        if (err) {
+            console.log(`Error: ${err}`);
+            res.status(500).send(`Error: ${error}`);
+        } else {
+            if(product === null){
+                console.log('No product found');
+                res.status(404).send('not found');
+            }
+            else{
+                console.log(`Product: ${product}`)
+                res.render('darceys/view', {
+                    product: product
+                });
+            }
         }
     });
 }

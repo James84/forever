@@ -2,6 +2,12 @@
   font-family: "caviar";
   src: url("/fonts/Caviar-Dreams/CaviarDreams.ttf"); }
 
+a, a:hover {
+  color: inherit; }
+
+a:hover {
+  text-decoration: none; }
+
 html, body {
   margin: 0;
   padding: 0;

@@ -30,5 +30,7 @@ exports = module.exports = function(app) {
 
     app.get('/crafts', routes.views.crafts);
 
-    app.get('/darceys', routes.views.darceys);
+    app.get('/darceys', routes.views.darceys.index);    
+    app.get('/darceys/:id', routes.views.darceys.view);
+
 }

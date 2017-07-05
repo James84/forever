@@ -7,6 +7,7 @@
         <section class="row product-results-container">
             {{#each products}}
                 <section class="product-container col-md-6  col-lg-offset-1 col-lg-3">
+                    <a href="{{ProductLink}}">
                     <section class="product-thumbnail">
                         <img  src="{{ThumbnailUrl}}" alt="thumbnail image"/>   
                     </section>
@@ -16,6 +17,7 @@
                             £{{Price}}
                         </div>
                     </section>
+                    </a>
                 </section>
             {{/each}}
         </section>
