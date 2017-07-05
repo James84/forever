@@ -1,0 +1,27 @@
+{{#section 'head'}}
+    <link href="/css/view.css" rel="stylesheet" type="text/css"/>
+{{/section}}
+
+<section class="container-fluid">
+    <section>
+        <a href="/darceys"><<< Back to products</a>
+    </section>
+    
+    <section class="row">
+        <div class="col-lg-12">
+            <img class="main-product-image" src="http://www.darceyscandles.co.uk/{{product.MainImageUrl}}" alt="product image"/>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-lg-12">
+            <h1>{{product.Title}}</h1>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-lg-8">
+            <p>
+                {{product.Description}}
+            </p>
+        </div>
+    </section>
+</section>
