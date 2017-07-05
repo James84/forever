@@ -1,13 +1,7 @@
 let keystone = require('keystone'),
-    User = keystone.list('User'),    
-    Crafts = keystone.list('Crafts');
+    User = keystone.list('User');
 
 module.exports = function(next){
-    
-//    new Crafts.model({
-//        name: 'test gallery'
-//    }).save();
-    
     new User.model({
         name: { first: 'Admin', last: 'User' },
         email: 'admin@keystonejs.com',

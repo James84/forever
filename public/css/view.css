@@ -1,2 +1,4 @@
 .main-product-image {
-  margin-top: 2em; }
+  margin-top: 2em;
+  max-width: 350px;
+  max-height: 350px; }
