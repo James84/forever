@@ -1,10 +1,10 @@
 {
-  "name": "forever",
+  "name": "leonida-boutique",
   "version": "1.0.0",
   "description": "aloe stuff",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "NODE_ENV=production node ./app.js"
   },
   "author": "james runham",
   "license": "ISC",

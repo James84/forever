@@ -1,4 +1,5 @@
 const PORT = 3000;
+const 
 
 let keystone = require('keystone'),
     expressHandleBars = require('express3-handlebars'),
@@ -32,8 +33,8 @@ keystone.init({
     'view engine': 'handlebars',
     
     'auto update': true,
-    'mongo': 'mongodb://localhost:27017/leonida-boutique',
-//    'mongo': 'mongodb://jrunham:220815Dy@ds149122.mlab.com:49122/leonida-boutique',
+//    'mongo': 'mongodb://localhost:27017/leonida-boutique',
+    'mongo': 'mongodb://jrunham:220815Dy@ds149122.mlab.com:49122/leonida-boutique',
 
     'session': true,
     'auth': true,
