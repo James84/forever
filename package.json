@@ -4,7 +4,7 @@
   "description": "aloe stuff",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=production node ./app.js"
+    "start": "node app.js"
   },
   "author": "james runham",
   "license": "ISC",

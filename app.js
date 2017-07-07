@@ -1,5 +1,4 @@
 const PORT = 3000;
-const 
 
 let keystone = require('keystone'),
     expressHandleBars = require('express3-handlebars'),
