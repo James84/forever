@@ -5,12 +5,14 @@
   background-repeat: no-repeat;
   padding: 17em 0; }
 
-.homepage-title h2 {
-  text-transform: uppercase;
-  color: #BAC;
-  font-size: 3em;
-  font-weight: 300;
-  text-align: center; }
+.homepage-title {
+  margin-bottom: 3em; }
+  .homepage-title h2 {
+    text-transform: uppercase;
+    color: #BAC;
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center; }
 
 .link-container a {
   display: inline;
