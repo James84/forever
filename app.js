@@ -1,4 +1,6 @@
 const PORT = 3000;
+//const DBCONNECTION = 'mongodb://localhost:27017/leonida-boutique';
+const DBCONNECTION = 'mongodb://jrunham:220815Dy@ds149122.mlab.com:49122/leonida-boutique';
 
 let keystone = require('keystone'),
     expressHandleBars = require('express3-handlebars'),
@@ -6,12 +8,10 @@ let keystone = require('keystone'),
 
 keystone.init({
     'name': 'LeonidaBoutique',
-    
     'scss': 'public',
     'static': 'public',
 //    'favicon': 'public/favicon.ico',
     'views': 'views',
-    
     'custom engine': expressHandleBars({
                         layoutsDir: path.join(__dirname, 'views/layouts'),
                         partialsDir: path.join(__dirname, '/views/partials/'),
@@ -30,11 +30,8 @@ keystone.init({
                     }),
     
     'view engine': 'handlebars',
-    
     'auto update': true,
-//    'mongo': 'mongodb://localhost:27017/leonida-boutique',
-    'mongo': 'mongodb://jrunham:220815Dy@ds149122.mlab.com:49122/leonida-boutique',
-
+    'mongo': DBCONNECTION,
     'session': true,
     'auth': true,
     'user model': 'User', 

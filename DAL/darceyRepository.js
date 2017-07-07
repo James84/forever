@@ -2,7 +2,7 @@ let mongoose = require('mongoose'),
     mapper = require('../mappers/productMapper'),
     darceySchema = require('./models/darcey');
 
-const DBCONNECTION = 'mongodb://localhost:27017/DarceyDB';
+const DBCONNECTION = 'mongodb://jrunham:220815Dy@ds149122.mlab.com:49122/leonida-boutique';
 
 var db = mongoose.createConnection(DBCONNECTION, function (err) {
     if (err) {
