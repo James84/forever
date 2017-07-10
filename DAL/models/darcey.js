@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-module.exports = mongoose.Schema({
+module.exports = new mongoose.Schema({
     Title: String,
     ThumbnailUrl: String,
     MainImageUrl: String,
@@ -8,6 +8,6 @@ module.exports = mongoose.Schema({
     Reference: String,
     ProductLink: String,
     Description: String
-}, {
-    collection: 'DarceyProduct'
-});
+}/*, {
+    collection: 'DarceyWaxMelt'
+}*/);

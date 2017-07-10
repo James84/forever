@@ -13,9 +13,9 @@ var db = mongoose.createConnection(DBCONNECTION, function (err) {
 });
 
 var exports = module.exports.Products = function (req, res) {
-    var darcey = db.model('Darcey', darceySchema);
+    var model = mongoose.model('DarceyWaxMelts', darceySchema, 'DarceyWaxMelts');
 
-    var query = darcey.find({});
+    var query = model.find({});
 
     query.exec(function (err, products) {
         if (err) {
