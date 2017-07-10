@@ -13,19 +13,31 @@ var db = mongoose.createConnection(DBCONNECTION, function (err) {
 });
 
 var exports = module.exports.Products = function (req, res) {
-    var model = mongoose.model('DarceyWaxMelts', darceySchema, 'DarceyWaxMelts');
+    var collectionParam = req.params.product;
+    var mongoCollection = getCollectionName(collectionParam.trim());
+//    
+//    console.log(getCollectionName('wax-melts'));
+//    
+//    console.log('Collection param', collectionParam);
+//    console.log('Mongo param', mongoCollection);
+    
+    if(!collectionParam || !mongoCollection){
+        res.status(404).send('product not found');
+    } else {
+        var model = mongoose.model(mongoCollection, darceySchema, mongoCollection);
 
-    var query = model.find({});
+        var query = model.find({});
 
-    query.exec(function (err, products) {
-        if (err) {
-            console.log(`Error: ${err}`);
-        } else {
-            res.render('darceys/index', {
-                products: mapper.darceyMapper(products)
-            });
-        }
-    });
+        query.exec(function (err, products) {
+            if (err) {
+                console.log(`Error: ${err}`);
+            } else {
+                res.render('darceys/index', {
+                    products: mapper.darceyMapper(products)
+                });
+            }
+        });
+    }
 } 
 
 module.exports.GetProductById = function(req, res, id){
@@ -51,4 +63,19 @@ module.exports.GetProductById = function(req, res, id){
             }
         }
     });
+}
+
+getCollectionName = function(param){
+    switch(param){
+        case 'wax-melts':
+            return 'DarceyWaxMelts';
+        case 'candles':
+            return 'DarceyCandles';  
+        case 'oil-burners':
+            return 'DarceyOilBurners';  
+        case 'perfume':
+            return 'DarceyPerfume';  
+        default:
+            return null;
+    }
 }
